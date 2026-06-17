@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": "trail-maintenance",
+      "slug": "trail-maintenance",
+      "path": "/conservation/trail-maintenance",
+      "cardTitle": "Trail Maintenance",
+      "cardSubtitle": "Trail crews and route care",
+      "cardCategory": "Trail Maintenance",
+      "cardDescription": "Recognizing the crews and volunteers who clear, rebuild, mark, and protect the paths we depend on.",
+      "detailTitle": "Trail Maintenance",
+      "detailIntro": "A placeholder record for trail crews, volunteer days, route repairs, signage work, and the people keeping public paths usable.",
+      "organizationNotes": "Coming soon: add trail clubs, park partners, volunteer crews, and local groups connected to this work.",
+      "donationNotes": "Coming soon: track donation ideas, support links, needed tools, and any verified support sent by The LostCompass Project.",
+      "fieldUpdates": "Coming soon: add cleanup days, trail reports, field photos, route notes, and maintenance updates."
+    },
+    {
+      "id": "habitat-restoration",
+      "slug": "habitat-restoration",
+      "path": "/conservation/habitat-restoration",
+      "cardTitle": "Habitat Restoration",
+      "cardSubtitle": "Native life and recovery work",
+      "cardCategory": "Habitat Restoration",
+      "cardDescription": "Pointing attention toward patient work that lets damaged places recover and native life return.",
+      "detailTitle": "Habitat Restoration",
+      "detailIntro": "A placeholder record for restoration work, native planting, invasive removal, damaged-area recovery, and habitat education.",
+      "organizationNotes": "Coming soon: add restoration groups, conservation clubs, land trusts, and local stewardship teams.",
+      "donationNotes": "Coming soon: track verified support links, donation targets, material needs, and support history.",
+      "fieldUpdates": "Coming soon: add restoration site notes, volunteer dates, before/after records, and field observations."
+    },
+    {
+      "id": "river-cleanup",
+      "slug": "river-cleanup",
+      "path": "/conservation/river-cleanup",
+      "cardTitle": "River Cleanup",
+      "cardSubtitle": "Waterways and downstream impact",
+      "cardCategory": "River Cleanup",
+      "cardDescription": "Following the waterways that connect communities, wildlife, recreation, and the health of everything downstream.",
+      "detailTitle": "River Cleanup",
+      "detailIntro": "A placeholder record for river cleanups, creek walks, shoreline trash removal, waterway groups, and downstream impact notes.",
+      "organizationNotes": "Coming soon: add waterkeeper groups, cleanup clubs, paddling groups, municipal partners, and volunteer teams.",
+      "donationNotes": "Coming soon: track bags, gloves, haul-off support, verified donation links, and support records.",
+      "fieldUpdates": "Coming soon: add cleanup routes, dates, trash totals, photos, hazards, and post-cleanup notes."
+    },
+    {
+      "id": "reef-restoration",
+      "slug": "reef-restoration",
+      "path": "/conservation/reef-restoration",
+      "cardTitle": "Reef Restoration",
+      "cardSubtitle": "Blue places below the surface",
+      "cardCategory": "Reef Restoration",
+      "cardDescription": "Honoring the ocean stewards working below the surface to protect fragile blue places most people never see.",
+      "detailTitle": "Reef Restoration",
+      "detailIntro": "A placeholder record for reef restoration groups, ocean stewards, dive teams, coral nurseries, and marine protection work.",
+      "organizationNotes": "Coming soon: add reef organizations, dive clubs, marine labs, and coastal stewardship groups.",
+      "donationNotes": "Coming soon: track verified donation pages, volunteer support, equipment needs, and support history.",
+      "fieldUpdates": "Coming soon: add reef project updates, public reports, volunteer notes, and impact records."
+    },
+    {
+      "id": "outdoor-education",
+      "slug": "outdoor-education",
+      "path": "/conservation/outdoor-education",
+      "cardTitle": "Outdoor Education",
+      "cardSubtitle": "Awareness and better choices outside",
+      "cardCategory": "Outdoor Education",
+      "cardDescription": "Turning curiosity into awareness, better choices outside, and a deeper relationship with place.",
+      "detailTitle": "Outdoor Education",
+      "detailIntro": "A placeholder record for educators, programs, guides, workshops, youth groups, and practical stewardship learning.",
+      "organizationNotes": "Coming soon: add outdoor education groups, schools, interpretive programs, guides, and workshop partners.",
+      "donationNotes": "Coming soon: track supply needs, scholarship ideas, verified support links, and support history.",
+      "fieldUpdates": "Coming soon: add class notes, event dates, learning resources, and field education updates."
+    },
+    {
+      "id": "volunteer-support",
+      "slug": "volunteer-support",
+      "path": "/conservation/volunteer-support",
+      "cardTitle": "Volunteer Support",
+      "cardSubtitle": "People who show up and do the work",
+      "cardCategory": "Volunteer Support",
+      "cardDescription": "Keeping the focus on the people who show up, do the work, and leave the route wild for the next person.",
+      "detailTitle": "Volunteer Support",
+      "detailIntro": "A placeholder record for volunteer crews, community groups, project leads, support needs, and impact records.",
+      "organizationNotes": "Coming soon: add volunteer teams, community groups, local leaders, clubs, and partner organizations.",
+      "donationNotes": "Coming soon: track food, travel, supplies, direct support, verified donation links, and support history.",
+      "fieldUpdates": "Coming soon: add volunteer days, people helped, project notes, photos, and impact updates."
+    }
+  ]
+}

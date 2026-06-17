@@ -1,0 +1,644 @@
+==================================================
+ THE LOST COMPASS PROJECT - CLEAN SITE AUDIT
+==================================================
+
+1) PROJECT LOCATION
+/home/alchimedes/projects/TheLostCompassProject
+
+2) TOP LEVEL FILES
+total 36
+drwxrwxr-x 8 alchimedes alchimedes 4096 May 30 23:24 .
+drwxrwxr-x 3 alchimedes alchimedes 4096 May 30 12:09 ..
+drwxr-xr-x 2 alchimedes alchimedes 4096 May 30 12:43 .agents
+drwxrwxr-x 5 alchimedes alchimedes 4096 May 30 12:09 assets
+drwxrwxr-x 2 alchimedes alchimedes 4096 May 30 12:15 Brand
+drwxr-xr-x 2 alchimedes alchimedes 4096 May 30 12:43 .codex
+drwxr-xr-x 2 alchimedes alchimedes 4096 May 30 12:43 .git
+-rw-rw-r-- 1 alchimedes alchimedes  236 May 30 23:24 lostcompass_site_audit_clean_report.txt
+drwxrwxr-x 6 alchimedes alchimedes 4096 May 30 17:31 website
+
+==================================================
+3) CHECKING FOR OLD TAGLINE: Leave It Better
+==================================================
+./lostcompass_site_audit_clean_report.txt:21:3) CHECKING FOR OLD TAGLINE: Leave It Better
+./Brand/MANIFESTO.md:5:Leave It Better.
+./Brand/MANIFESTO.md:63:Leave It Better.
+./Brand/WEBSITE_BRIEF.md:42:Leave It Better.
+./Brand/WEBSITE_BRIEF.md:202:Leave It Better.
+./Brand/WEBSITE_BRIEF.md:428:Leave It Better.
+./Brand/BRAND_GUIDE.md:34:Leave It Better.
+./Brand/BRAND_GUIDE.md:214:Leave It Better.
+./Brand/BRAND_GUIDE.md:344:Leave It Better.
+
+==================================================
+4) CHECKING FOR NEW TAGLINE: Leave It Wild
+==================================================
+./website/src/data/siteContent.js:41:    tagline: 'Find Your Way. Explore More. Leave It Wild.',
+./website/src/data/siteContent.js:84:      'Every story shared, every trail walked, every river crossed, and every conservation lead followed should point toward the same mission: Find Your Way. Explore More. Leave It Wild.',
+./website/src/data/siteContent.js:117:      title: 'Find Your Way. Explore More. Leave It Wild.',
+./website/src/components/Footer.jsx:15:            Leave It Wild.
+./website/index.html:15:      content="Find Your Way. Explore More. Leave It Wild."
+./lostcompass_site_audit_clean_report.txt:34:4) CHECKING FOR NEW TAGLINE: Leave It Wild
+
+==================================================
+5) ROUTES / COLLECTION / PRODUCT REFERENCES
+==================================================
+./website/src/App.jsx:9:  collectionPages,
+./website/src/App.jsx:10:  collections,
+./website/src/App.jsx:20:  const hash = window.location.hash.replace('#', '');
+./website/src/App.jsx:67:      const link = event.target.closest?.('a[href^="#/"]');
+./website/src/App.jsx:72:      const href = link.getAttribute('href');
+./website/src/App.jsx:73:      if (!href?.startsWith('#/')) {
+./website/src/App.jsx:80:      if (href.slice(1) === pathRef.current) {
+./website/src/App.jsx:100:    const productPage = allProducts.find((product) => product.path === path);
+./website/src/App.jsx:102:    if (productPage) {
+./website/src/App.jsx:104:        return <ProductPreviewPage product={productPage} />;
+./website/src/App.jsx:108:    const collectionPage = collectionPages.find((collection) => (
+./website/src/App.jsx:109:      collection.path === path || collection.legacyPath === path
+./website/src/App.jsx:112:    if (collectionPage) {
+./website/src/App.jsx:114:        return <CollectionPreviewPage collection={collectionPage} />;
+./website/src/App.jsx:192:            <a href={`#${homeContent.hero.primaryCta.path}`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-compass-gold px-6 text-sm font-black uppercase tracking-[0.16em] text-compass-black transition hover:bg-compass-parchment">
+./website/src/App.jsx:196:            <a href={`#${homeContent.hero.secondaryCta.path}`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 text-sm font-black uppercase tracking-[0.16em] text-compass-parchment backdrop-blur transition hover:border-compass-gold hover:text-compass-gold">
+./website/src/App.jsx:297:          eyebrow={homeContent.collection.eyebrow}
+./website/src/App.jsx:298:          title={homeContent.collection.title}
+./website/src/App.jsx:299:          text={homeContent.collection.text}
+./website/src/App.jsx:302:          {collections.map((collection) => (
+./website/src/App.jsx:304:              key={collection.title}
+./website/src/App.jsx:307:              <a href={collection.path ? `#${collection.path}` : undefined} className="block">
+./website/src/App.jsx:309:                  {collection.image ? (
+./website/src/App.jsx:310:                    <img src={collection.image} alt="" className="h-full w-full object-cover" />
+./website/src/App.jsx:324:                  {collection.label}
+./website/src/App.jsx:327:                  {collection.title}
+./website/src/App.jsx:329:                <p className="mt-3 text-sm leading-7 text-compass-muted">{collection.text}</p>
+./website/src/App.jsx:365:              eyebrow={pageContent.apparel.collections.eyebrow}
+./website/src/App.jsx:366:              title={pageContent.apparel.collections.title}
+./website/src/App.jsx:367:              text={pageContent.apparel.collections.text}
+./website/src/App.jsx:370:              {collections.map((collection) => (
+./website/src/App.jsx:372:                  key={collection.title}
+./website/src/App.jsx:375:                  <a href={`#${collection.path}`} className="block">
+./website/src/App.jsx:377:                      <img src={collection.image} alt="" className="h-full w-full object-cover" />
+./website/src/App.jsx:380:                      {collection.label}
+./website/src/App.jsx:383:                      {collection.title}
+./website/src/App.jsx:385:                    <p className="mt-3 text-sm leading-7 text-compass-muted">{collection.text}</p>
+./website/src/App.jsx:394:              eyebrow={pageContent.apparel.products.eyebrow}
+./website/src/App.jsx:395:              title={pageContent.apparel.products.title}
+./website/src/App.jsx:396:              text={pageContent.apparel.products.text}
+./website/src/App.jsx:399:              {allProducts.map((product) => (
+./website/src/App.jsx:400:                <ProductPreviewCard key={product.path} product={product} />
+./website/src/App.jsx:410:function CollectionPreviewPage({ collection }) {
+./website/src/App.jsx:414:        eyebrow={collection.hero.eyebrow}
+./website/src/App.jsx:415:        title={collection.hero.title}
+./website/src/App.jsx:416:        text={collection.hero.text}
+./website/src/App.jsx:426:            eyebrow={collection.intro.eyebrow}
+./website/src/App.jsx:427:            title={collection.intro.title}
+./website/src/App.jsx:428:            text={collection.intro.text}
+./website/src/App.jsx:431:            {collection.items.map((item) => (
+./website/src/App.jsx:434:                product={{ ...item, collection: collection.title }}
+./website/src/App.jsx:439:            <h2 className="text-2xl font-black uppercase text-compass-parchment">{collection.note.title}</h2>
+./website/src/App.jsx:440:            <p className="mt-4 max-w-4xl text-sm leading-7 text-compass-muted">{collection.note.text}</p>
+./website/src/App.jsx:448:function ProductPreviewCard({ product }) {
+./website/src/App.jsx:451:      <a href={`#${product.path}`} className="block">
+./website/src/App.jsx:453:          <img src={product.image} alt="" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+./website/src/App.jsx:459:          {product.collection}
+./website/src/App.jsx:462:          {product.name}
+./website/src/App.jsx:464:        <p className="mt-3 text-sm leading-7 text-compass-muted">{product.description}</p>
+./website/src/App.jsx:473:function ProductPreviewPage({ product }) {
+./website/src/App.jsx:478:        title={product.name}
+./website/src/App.jsx:479:        text={product.description}
+./website/src/App.jsx:489:            <img src={product.image} alt="" className="aspect-square w-full rounded-md object-cover" />
+./website/src/App.jsx:496:              {product.collection}
+./website/src/App.jsx:499:              {product.name}
+./website/src/App.jsx:502:              {product.description}
+./website/src/App.jsx:516:                {product.storeUrlPlaceholder || 'Future store URL placeholder. Not assigned for V0.1.'}
+./website/src/App.jsx:519:            {product.collectionPath ? (
+./website/src/App.jsx:520:              <a href={`#${product.collectionPath}`} className="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-compass-parchment hover:text-compass-gold">
+./website/src/data/siteContent.js:49:    text: 'The Lost Compass Project is built for people who see meaning in the places others pass by.\n\nWe follow trails, uncover stories, preserve history, and celebrate the people who care for the places we love.\n\nOur mission is simple:\n\nExplore with purpose.\nTell stories worth remembering.\nSupport the heroes protecting what matters.\n\nFuture mission-support collections will help direct support toward trail crews, conservation groups, educators, volunteers, and organizations working to protect the places we explore.',
+./website/src/data/siteContent.js:56:    text: 'This is where routes become records: photographs, local history, field notes, forgotten places, and the human work behind the landscapes we love.',
+./website/src/data/siteContent.js:64:    featureText: 'Conservation is not a side note to adventure. It is the proof that the journey meant something: better stories, cleaner routes, protected habitats, and respect for the people already doing the work.',
+./website/src/data/siteContent.js:66:  collection: {
+./website/src/data/siteContent.js:69:    text: 'Marks of the journey. Symbols of direction. Pieces inspired by the trails, stories, and people that make this project possible. Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./website/src/data/siteContent.js:92:      text: 'Stories From The Trail preserves photography, route notes, local history, conservation stories, and reflections from mountains, waterways, forests, coastlines, and forgotten places.',
+./website/src/data/siteContent.js:109:      title: 'Move with purpose. Leave the route wild.',
+./website/src/data/siteContent.js:110:      text: 'The journey starts with attention: to the route, the history underfoot, the people maintaining the path, and the mark we leave behind.',
+./website/src/data/siteContent.js:138:    collections: {
+./website/src/data/siteContent.js:141:      text: 'Each collection is a visual preview of future mission-support pieces. No checkout, no cart, no prices, and no store links are active in V0.1.',
+./website/src/data/siteContent.js:143:    products: {
+./website/src/data/siteContent.js:164:    text: 'Tide lines, river bends, hidden falls, and the routes where water shapes memory, culture, and responsibility.',
+./website/src/data/siteContent.js:178:    text: 'Field notes that connect a landscape to the people, work, routes, and decisions that shaped it.',
+./website/src/data/siteContent.js:231:    text: 'Keeping the focus on the people who show up, do the work, and leave the route wild for the next person.',
+./website/src/data/siteContent.js:235:export const collectionPages = [
+./website/src/data/siteContent.js:238:    folderName: 'Compass rose collection',
+./website/src/data/siteContent.js:240:    path: '/collections/compass-rose-collection',
+./website/src/data/siteContent.js:241:    legacyPath: '/compass-rose-collection',
+./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./website/src/data/siteContent.js:256:      text: 'Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./website/src/data/siteContent.js:262:        path: '/products/compass-rose-backmark',
+./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./website/src/data/siteContent.js:270:        path: '/products/compass-rose-front-back',
+./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./website/src/data/siteContent.js:278:        path: '/products/compass-rose-mountain-sea-mark',
+./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./website/src/data/siteContent.js:287:    folderName: 'mountain and sea collection',
+./website/src/data/siteContent.js:289:    path: '/collections/mountain-and-sea-collection',
+./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./website/src/data/siteContent.js:295:      text: 'A field-journal preview of designs inspired by ridgelines, tide lines, old routes, and the pull between mountain and ocean.',
+./website/src/data/siteContent.js:304:      text: 'Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./website/src/data/siteContent.js:310:        path: '/products/mountain-and-sea-series',
+./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./website/src/data/siteContent.js:321:    path: '/collections/trail-crew-collection',
+./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./website/src/data/siteContent.js:336:      text: 'Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./website/src/data/siteContent.js:342:        path: '/products/keep-it-wild-crew-gear',
+./website/src/data/siteContent.js:343:        image: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./website/src/data/siteContent.js:351:export const collections = collectionPages.map((collection) => ({
+./website/src/data/siteContent.js:352:  title: collection.title,
+./website/src/data/siteContent.js:353:  label: collection.label,
+./website/src/data/siteContent.js:354:  image: collection.previewImage,
+./website/src/data/siteContent.js:355:  path: collection.path,
+./website/src/data/siteContent.js:356:  text: collection.summary,
+./website/src/data/siteContent.js:359:export const allProducts = collectionPages.flatMap((collection) => (
+./website/src/data/siteContent.js:360:  collection.items.map((item) => ({
+./website/src/data/siteContent.js:362:    collection: collection.title,
+./website/src/data/siteContent.js:363:    collectionPath: collection.path,
+./website/src/data/siteContent.js:377:    text: 'Real places, real adventures, and field records that turn a route into shared memory.',
+./website/src/data/siteContent.js:395:    text: 'Share a route, place, photo essay idea, local history lead, or adventure story worth preserving.',
+./website/src/data/siteContent.js:405:    text: 'Connect about photography, mission-support collection concepts, conservation storytelling, or responsible partnerships.',
+./website/src/components/Logo.jsx:5:    <a href="#/" className="group inline-flex items-center gap-3" aria-label="The Lost Compass Project home">
+./website/src/components/Footer.jsx:23:                <a key={item.path} href={`#${item.path}`} className="text-sm text-compass-parchment/78 hover:text-compass-gold">
+./website/src/components/Header.jsx:11:      currentPath.startsWith('/collections/') ||
+./website/src/components/Header.jsx:12:      currentPath.startsWith('/products/')
+./website/src/components/Header.jsx:24:              href={`#${item.path}`}
+./website/src/components/Header.jsx:51:                href={`#${item.path}`}
+./website/FUTURE_ADMIN_NOTES.md:16:- Shirt/product collections
+./website/FUTURE_ADMIN_NOTES.md:60:- Shirt/product collection records
+./website/README.md:34:The production output is created in:
+./website/README.md:58:- contact route cards
+./website/README.md:60:When an admin/content-entry system is added later, replace these data records with managed content for stories, field journal entries, conservation partner highlights, collections, and photos/images without changing the page layout components first.
+./website/README.md:74:The site uses hash-based navigation such as `#/our-story`, so it does not require special rewrite rules for V0.1.
+./website/index.html:10:    <link rel="icon" type="image/png" href="/favicon.png" />
+./website/index.html:11:    <link rel="preload" as="image" href="/assets/logos/compass-rose-transparent.webp" />
+./lostcompass_site_audit_clean_report.txt:46:./website/src/App.jsx:9:  collectionPages,
+./lostcompass_site_audit_clean_report.txt:47:./website/src/App.jsx:10:  collections,
+./lostcompass_site_audit_clean_report.txt:48:./website/src/App.jsx:20:  const hash = window.location.hash.replace('#', '');
+./lostcompass_site_audit_clean_report.txt:49:./website/src/App.jsx:67:      const link = event.target.closest?.('a[href^="#/"]');
+./lostcompass_site_audit_clean_report.txt:50:./website/src/App.jsx:72:      const href = link.getAttribute('href');
+./lostcompass_site_audit_clean_report.txt:51:./website/src/App.jsx:73:      if (!href?.startsWith('#/')) {
+./lostcompass_site_audit_clean_report.txt:52:./website/src/App.jsx:80:      if (href.slice(1) === pathRef.current) {
+./lostcompass_site_audit_clean_report.txt:53:./website/src/App.jsx:100:    const productPage = allProducts.find((product) => product.path === path);
+./lostcompass_site_audit_clean_report.txt:54:./website/src/App.jsx:102:    if (productPage) {
+./lostcompass_site_audit_clean_report.txt:55:./website/src/App.jsx:104:        return <ProductPreviewPage product={productPage} />;
+./lostcompass_site_audit_clean_report.txt:56:./website/src/App.jsx:108:    const collectionPage = collectionPages.find((collection) => (
+./lostcompass_site_audit_clean_report.txt:57:./website/src/App.jsx:109:      collection.path === path || collection.legacyPath === path
+./lostcompass_site_audit_clean_report.txt:58:./website/src/App.jsx:112:    if (collectionPage) {
+./lostcompass_site_audit_clean_report.txt:59:./website/src/App.jsx:114:        return <CollectionPreviewPage collection={collectionPage} />;
+./lostcompass_site_audit_clean_report.txt:60:./website/src/App.jsx:192:            <a href={`#${homeContent.hero.primaryCta.path}`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-compass-gold px-6 text-sm font-black uppercase tracking-[0.16em] text-compass-black transition hover:bg-compass-parchment">
+./lostcompass_site_audit_clean_report.txt:61:./website/src/App.jsx:196:            <a href={`#${homeContent.hero.secondaryCta.path}`} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 text-sm font-black uppercase tracking-[0.16em] text-compass-parchment backdrop-blur transition hover:border-compass-gold hover:text-compass-gold">
+./lostcompass_site_audit_clean_report.txt:62:./website/src/App.jsx:297:          eyebrow={homeContent.collection.eyebrow}
+./lostcompass_site_audit_clean_report.txt:63:./website/src/App.jsx:298:          title={homeContent.collection.title}
+./lostcompass_site_audit_clean_report.txt:64:./website/src/App.jsx:299:          text={homeContent.collection.text}
+./lostcompass_site_audit_clean_report.txt:65:./website/src/App.jsx:302:          {collections.map((collection) => (
+./lostcompass_site_audit_clean_report.txt:66:./website/src/App.jsx:304:              key={collection.title}
+./lostcompass_site_audit_clean_report.txt:67:./website/src/App.jsx:307:              <a href={collection.path ? `#${collection.path}` : undefined} className="block">
+./lostcompass_site_audit_clean_report.txt:68:./website/src/App.jsx:309:                  {collection.image ? (
+./lostcompass_site_audit_clean_report.txt:69:./website/src/App.jsx:310:                    <img src={collection.image} alt="" className="h-full w-full object-cover" />
+./lostcompass_site_audit_clean_report.txt:70:./website/src/App.jsx:324:                  {collection.label}
+./lostcompass_site_audit_clean_report.txt:71:./website/src/App.jsx:327:                  {collection.title}
+./lostcompass_site_audit_clean_report.txt:72:./website/src/App.jsx:329:                <p className="mt-3 text-sm leading-7 text-compass-muted">{collection.text}</p>
+./lostcompass_site_audit_clean_report.txt:73:./website/src/App.jsx:365:              eyebrow={pageContent.apparel.collections.eyebrow}
+./lostcompass_site_audit_clean_report.txt:74:./website/src/App.jsx:366:              title={pageContent.apparel.collections.title}
+./lostcompass_site_audit_clean_report.txt:75:./website/src/App.jsx:367:              text={pageContent.apparel.collections.text}
+./lostcompass_site_audit_clean_report.txt:76:./website/src/App.jsx:370:              {collections.map((collection) => (
+./lostcompass_site_audit_clean_report.txt:77:./website/src/App.jsx:372:                  key={collection.title}
+./lostcompass_site_audit_clean_report.txt:78:./website/src/App.jsx:375:                  <a href={`#${collection.path}`} className="block">
+./lostcompass_site_audit_clean_report.txt:79:./website/src/App.jsx:377:                      <img src={collection.image} alt="" className="h-full w-full object-cover" />
+./lostcompass_site_audit_clean_report.txt:80:./website/src/App.jsx:380:                      {collection.label}
+./lostcompass_site_audit_clean_report.txt:81:./website/src/App.jsx:383:                      {collection.title}
+./lostcompass_site_audit_clean_report.txt:82:./website/src/App.jsx:385:                    <p className="mt-3 text-sm leading-7 text-compass-muted">{collection.text}</p>
+./lostcompass_site_audit_clean_report.txt:83:./website/src/App.jsx:394:              eyebrow={pageContent.apparel.products.eyebrow}
+./lostcompass_site_audit_clean_report.txt:84:./website/src/App.jsx:395:              title={pageContent.apparel.products.title}
+./lostcompass_site_audit_clean_report.txt:85:./website/src/App.jsx:396:              text={pageContent.apparel.products.text}
+./lostcompass_site_audit_clean_report.txt:86:./website/src/App.jsx:399:              {allProducts.map((product) => (
+./lostcompass_site_audit_clean_report.txt:87:./website/src/App.jsx:400:                <ProductPreviewCard key={product.path} product={product} />
+./lostcompass_site_audit_clean_report.txt:88:./website/src/App.jsx:410:function CollectionPreviewPage({ collection }) {
+./lostcompass_site_audit_clean_report.txt:89:./website/src/App.jsx:414:        eyebrow={collection.hero.eyebrow}
+./lostcompass_site_audit_clean_report.txt:90:./website/src/App.jsx:415:        title={collection.hero.title}
+./lostcompass_site_audit_clean_report.txt:91:./website/src/App.jsx:416:        text={collection.hero.text}
+./lostcompass_site_audit_clean_report.txt:92:./website/src/App.jsx:426:            eyebrow={collection.intro.eyebrow}
+./lostcompass_site_audit_clean_report.txt:93:./website/src/App.jsx:427:            title={collection.intro.title}
+./lostcompass_site_audit_clean_report.txt:94:./website/src/App.jsx:428:            text={collection.intro.text}
+./lostcompass_site_audit_clean_report.txt:95:./website/src/App.jsx:431:            {collection.items.map((item) => (
+./lostcompass_site_audit_clean_report.txt:96:./website/src/App.jsx:434:                product={{ ...item, collection: collection.title }}
+./lostcompass_site_audit_clean_report.txt:97:./website/src/App.jsx:439:            <h2 className="text-2xl font-black uppercase text-compass-parchment">{collection.note.title}</h2>
+./lostcompass_site_audit_clean_report.txt:98:./website/src/App.jsx:440:            <p className="mt-4 max-w-4xl text-sm leading-7 text-compass-muted">{collection.note.text}</p>
+./lostcompass_site_audit_clean_report.txt:99:./website/src/App.jsx:448:function ProductPreviewCard({ product }) {
+./lostcompass_site_audit_clean_report.txt:100:./website/src/App.jsx:451:      <a href={`#${product.path}`} className="block">
+./lostcompass_site_audit_clean_report.txt:101:./website/src/App.jsx:453:          <img src={product.image} alt="" className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+./lostcompass_site_audit_clean_report.txt:102:./website/src/App.jsx:459:          {product.collection}
+./lostcompass_site_audit_clean_report.txt:103:./website/src/App.jsx:462:          {product.name}
+./lostcompass_site_audit_clean_report.txt:104:./website/src/App.jsx:464:        <p className="mt-3 text-sm leading-7 text-compass-muted">{product.description}</p>
+./lostcompass_site_audit_clean_report.txt:105:./website/src/App.jsx:473:function ProductPreviewPage({ product }) {
+./lostcompass_site_audit_clean_report.txt:106:./website/src/App.jsx:478:        title={product.name}
+./lostcompass_site_audit_clean_report.txt:107:./website/src/App.jsx:479:        text={product.description}
+./lostcompass_site_audit_clean_report.txt:108:./website/src/App.jsx:489:            <img src={product.image} alt="" className="aspect-square w-full rounded-md object-cover" />
+./lostcompass_site_audit_clean_report.txt:109:./website/src/App.jsx:496:              {product.collection}
+./lostcompass_site_audit_clean_report.txt:110:./website/src/App.jsx:499:              {product.name}
+./lostcompass_site_audit_clean_report.txt:111:./website/src/App.jsx:502:              {product.description}
+./lostcompass_site_audit_clean_report.txt:112:./website/src/App.jsx:516:                {product.storeUrlPlaceholder || 'Future store URL placeholder. Not assigned for V0.1.'}
+./lostcompass_site_audit_clean_report.txt:113:./website/src/App.jsx:519:            {product.collectionPath ? (
+./lostcompass_site_audit_clean_report.txt:114:./website/src/App.jsx:520:              <a href={`#${product.collectionPath}`} className="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-compass-parchment hover:text-compass-gold">
+./lostcompass_site_audit_clean_report.txt:115:./website/src/data/siteContent.js:49:    text: 'The Lost Compass Project is built for people who see meaning in the places others pass by.\n\nWe follow trails, uncover stories, preserve history, and celebrate the people who care for the places we love.\n\nOur mission is simple:\n\nExplore with purpose.\nTell stories worth remembering.\nSupport the heroes protecting what matters.\n\nFuture mission-support collections will help direct support toward trail crews, conservation groups, educators, volunteers, and organizations working to protect the places we explore.',
+./lostcompass_site_audit_clean_report.txt:116:./website/src/data/siteContent.js:56:    text: 'This is where routes become records: photographs, local history, field notes, forgotten places, and the human work behind the landscapes we love.',
+./lostcompass_site_audit_clean_report.txt:117:./website/src/data/siteContent.js:64:    featureText: 'Conservation is not a side note to adventure. It is the proof that the journey meant something: better stories, cleaner routes, protected habitats, and respect for the people already doing the work.',
+./lostcompass_site_audit_clean_report.txt:118:./website/src/data/siteContent.js:66:  collection: {
+./lostcompass_site_audit_clean_report.txt:119:./website/src/data/siteContent.js:69:    text: 'Marks of the journey. Symbols of direction. Pieces inspired by the trails, stories, and people that make this project possible. Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./lostcompass_site_audit_clean_report.txt:120:./website/src/data/siteContent.js:92:      text: 'Stories From The Trail preserves photography, route notes, local history, conservation stories, and reflections from mountains, waterways, forests, coastlines, and forgotten places.',
+./lostcompass_site_audit_clean_report.txt:121:./website/src/data/siteContent.js:109:      title: 'Move with purpose. Leave the route wild.',
+./lostcompass_site_audit_clean_report.txt:122:./website/src/data/siteContent.js:110:      text: 'The journey starts with attention: to the route, the history underfoot, the people maintaining the path, and the mark we leave behind.',
+./lostcompass_site_audit_clean_report.txt:123:./website/src/data/siteContent.js:138:    collections: {
+./lostcompass_site_audit_clean_report.txt:124:./website/src/data/siteContent.js:141:      text: 'Each collection is a visual preview of future mission-support pieces. No checkout, no cart, no prices, and no store links are active in V0.1.',
+./lostcompass_site_audit_clean_report.txt:125:./website/src/data/siteContent.js:143:    products: {
+./lostcompass_site_audit_clean_report.txt:126:./website/src/data/siteContent.js:164:    text: 'Tide lines, river bends, hidden falls, and the routes where water shapes memory, culture, and responsibility.',
+./lostcompass_site_audit_clean_report.txt:127:./website/src/data/siteContent.js:178:    text: 'Field notes that connect a landscape to the people, work, routes, and decisions that shaped it.',
+./lostcompass_site_audit_clean_report.txt:128:./website/src/data/siteContent.js:231:    text: 'Keeping the focus on the people who show up, do the work, and leave the route wild for the next person.',
+./lostcompass_site_audit_clean_report.txt:129:./website/src/data/siteContent.js:235:export const collectionPages = [
+./lostcompass_site_audit_clean_report.txt:130:./website/src/data/siteContent.js:238:    folderName: 'Compass rose collection',
+./lostcompass_site_audit_clean_report.txt:131:./website/src/data/siteContent.js:240:    path: '/collections/compass-rose-collection',
+./lostcompass_site_audit_clean_report.txt:132:./website/src/data/siteContent.js:241:    legacyPath: '/compass-rose-collection',
+./lostcompass_site_audit_clean_report.txt:133:./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:134:./website/src/data/siteContent.js:256:      text: 'Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./lostcompass_site_audit_clean_report.txt:135:./website/src/data/siteContent.js:262:        path: '/products/compass-rose-backmark',
+./lostcompass_site_audit_clean_report.txt:136:./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./lostcompass_site_audit_clean_report.txt:137:./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./lostcompass_site_audit_clean_report.txt:138:./website/src/data/siteContent.js:270:        path: '/products/compass-rose-front-back',
+./lostcompass_site_audit_clean_report.txt:139:./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:140:./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./lostcompass_site_audit_clean_report.txt:141:./website/src/data/siteContent.js:278:        path: '/products/compass-rose-mountain-sea-mark',
+./lostcompass_site_audit_clean_report.txt:142:./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./lostcompass_site_audit_clean_report.txt:143:./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./lostcompass_site_audit_clean_report.txt:144:./website/src/data/siteContent.js:287:    folderName: 'mountain and sea collection',
+./lostcompass_site_audit_clean_report.txt:145:./website/src/data/siteContent.js:289:    path: '/collections/mountain-and-sea-collection',
+./lostcompass_site_audit_clean_report.txt:146:./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:147:./website/src/data/siteContent.js:295:      text: 'A field-journal preview of designs inspired by ridgelines, tide lines, old routes, and the pull between mountain and ocean.',
+./lostcompass_site_audit_clean_report.txt:148:./website/src/data/siteContent.js:304:      text: 'Future collections will help support the heroes behind the journey: trail crews, conservation groups, educators, volunteers, and organizations protecting the places we love.',
+./lostcompass_site_audit_clean_report.txt:149:./website/src/data/siteContent.js:310:        path: '/products/mountain-and-sea-series',
+./lostcompass_site_audit_clean_report.txt:150:./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:151:./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./lostcompass_site_audit_clean_report.txt:152:./website/src/data/siteContent.js:321:    path: '/collections/trail-crew-collection',
+./lostcompass_site_audit_clean_report.txt:153:./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:154:./website/src/data/siteContent.js:336:      text: 'Future collections will help support the heroes behind the journey:
+./Brand/MANIFESTO.md:56:Every product created.
+./Brand/BRAND_GUIDE.md:270:Nature over products.
+./Brand/BRAND_GUIDE.md:334:Every product.
+
+==================================================
+6) SCROLL TO TOP CHECK
+==================================================
+./website/src/App.jsx:20:  const hash = window.location.hash.replace('#', '');
+./website/src/App.jsx:55:          window.scrollTo({ top: 0, behavior: 'smooth' });
+./website/src/App.jsx:61:          window.scrollTo({ top: previousScrollY, behavior: 'auto' });
+./website/src/App.jsx:83:          window.scrollTo({ top: 0, behavior: 'smooth' });
+./website/src/App.jsx:89:    window.addEventListener('hashchange', updatePath);
+./website/src/App.jsx:92:      window.removeEventListener('hashchange', updatePath);
+./lostcompass_site_audit_clean_report.txt:48:./website/src/App.jsx:20:  const hash = window.location.hash.replace('#', '');
+./lostcompass_site_audit_clean_report.txt:186:./lostcompass_site_audit_clean_report.txt:48:./website/src/App.jsx:20:  const hash = window.location.hash.replace('#', '');
+
+==================================================
+7) NAVBAR / HEADER POSITION CHECK
+==================================================
+./website/src/App.jsx:55:          window.scrollTo({ top: 0, behavior: 'smooth' });
+./website/src/App.jsx:61:          window.scrollTo({ top: previousScrollY, behavior: 'auto' });
+./website/src/App.jsx:83:          window.scrollTo({ top: 0, behavior: 'smooth' });
+./website/src/components/Header.jsx:17:    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-compass-black/78 backdrop-blur-xl">
+./website/src/components/Header.jsx:65:    </header>
+./lostcompass_site_audit_clean_report.txt:301:./website/src/App.jsx:55:          window.scrollTo({ top: 0, behavior: 'smooth' });
+./lostcompass_site_audit_clean_report.txt:302:./website/src/App.jsx:61:          window.scrollTo({ top: previousScrollY, behavior: 'auto' });
+./lostcompass_site_audit_clean_report.txt:303:./website/src/App.jsx:83:          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+==================================================
+8) APPAREL / PRODUCT IMAGES FOUND
+==================================================
+./assets/images/0hh_Zy5RDxmQ9Qim9tS4rnjndll_k6dJKtb4XuUkf6YCrwcVT_Oc_DGRPA4EK7jmZULVgEWwir7gHjOZfQUVnxPJq_4JHfVS7viu81Vzh-d5gke2k4CoibzEIMgIN3eJ0McqN-v_ysxn7HyagQOCX4HLXH2kKijalxy0Yx8sL5jKL9mI4pnc6pzF8yptry8C.jpeg
+./assets/images/0O9qZoiCyQkoW2JKIz05Fm9D2GNPfe3Qv6z7ni1XM4oZw1vokwD1VOz5AqmQHqK7YNWLZzIGNH1RjMb6-bl9HU3LymfNqCnsA-2ACEvlFwerhR5ZK3HN34xyVBY0tkC8KpmLiMW1I4BivrObiWTWAT4CwtwGUX8qqadYc2pVJM9Q89me39eIET_4e-YeosPy.jpeg
+./assets/images/4Qbx7zz-tNBsq39AwB1QEdrR7ikXlv13JhDS9TPW6KT2MQWmiC2niD3CklzUtZ8STYnVD2CDtGjiMY2oW5Vx9tkSGpNEiMrdEUvM7QlEbGJST2rolboYo_cfBM0cvgLOtclbsnIQAXVv-EoEwbg2AtDPVIlGv9hFo_nwyL2BxfSBwrGK8QB0U6AD04H1TiIm.jpeg
+./assets/images/DcVA_gEIs5JmkG7qqHV4zim6ITLFnW5UOgzwkeEsA0AKoBI1aJ0OBnEYjLm7nFIzNsg_TPsmdTkEtW9Cb_abe0mlmSMAVKw2E4AVglxOWFH9H0_d8f4XHTeLxvImGtb6anDXEWAFGSPVaX-HmJKPvBr0jGKu-hSmWaoDl3oSDGUy9eUQ69jhDi_Sho9-ju1L.jpeg
+./assets/images/DtN4Rg5yIrj3ub_hIGpHyMPkWEmIt8o9xRujF_pAzLsQw4aeR5pS3r56-zUzEBsgDAW8l12tseJl-zogN85uHA1zV_9hpWukvnZ8PjGFyDZL0EjXVXqacSSpYHedp02_yS-v9cVdsbxRmd5UrWaWZrunEGr9yhk4mp37ae8Evh-GQVs9FbBuuyxDQG-iuQJ_.jpeg
+./assets/images/El_U6dGIfBMFsGzcpqxoV46CHFK_HrVANk0k8Wf4p6xpGLmIuFp-r9OXh3Zn_EOKz_PzQXPPqLV6ZSUfG7VmJwOzvc6p8MDxLImFi8BBzmQuP4xMCgj9bIcdIxsMRvTtGaBHr0YMFJhUdg_v5LavOSzzKJqLMkT6vTBclprGpJ7WSJ4M7V4Lr2XfrawgGTGD.jpeg
+./assets/images/fqOBpbAY-RefAguxHkxG2A8BuYTxr6yqi15ipPuANcy4OCSL8ORmR62KHaTlsVqh0EpeydXZOAVgZaWKAtzlPo1q9xuuu7vdWOr5AqIjHjuZmu8AyVk9FwwE2kEihCSmvJ5lP6Dj25qZ2x_VstRJi5U1_iqiIFlpY9VTLzEMNNCjzeNdcVo_kl_tv9HDkvjC.jpeg
+./assets/images/fvIouh2bDlR5LVxoZm0KqyOi2F05URkNF7z3ajdbN-CwYCvHIp1pTvOzfgVo1voit50TWgmuh9mB8eQyfGnHv2D0CGjks3Or9a8lHHCBclL9TjbvIzgwEi-U89Rs7nOGNjjmMZtXMnAVOoTlFzV4Ms1oMpqc2n5BQNcKEjxfB5brhJBJZGjdmnvYWdmQfsrZ.jpeg
+./assets/images/gIp1AuivaNA-bF-7xOXoscDwMQg878T1EBWi-T9Yw7F_Iu8hpy1b5rNUcLDC6iIkYazpYWXRATFlou24D-NU-D_gJ25hkK-PCQd7BePF7mQzxUWtEHNwq5y2ultCvOvo_fuOw4GVSOWfJiSBZAIFcGYRs75EnG3uxZULFiD2ulLXu35sca9OjIJ9rVbnJFjo.jpeg
+./assets/images/Gp7WvQTbUC_udYOcZ2aQhFZIdYOD2qUiMR2ObdM7zmO9wZe494iX7w5fRs6NTEF4Snge0TDQVrP9vsP9kYMtolvlFzEonqwhx6fYeGhky8gwYnRZwT3pbKJe528ltqyY3T5XnNFFUyX5ZvLLuuoeku3u3dfVIdqKodXWAH-3KCtcHqQBwiNdaXnlxrpskX-j.jpeg
+./assets/images/I-xbRR53R6yyuBEGhFnpyWWJupPU_VIQk9e40qBfWBeupKYv7RW9r-Mg85xuAgSUbBZUTc4cW0NK7wONHaa_kJNADwEDCzdW-IW65JrAsAeJ7YizA11J7Q-ZCTb4KKkn2XYlxOCiPQolyfmd4K6QhH2PmFCIP6UFougMnJTx3SzCnrEZsTKDku238P8jidqU.jpeg
+./assets/images/j905a_m0OxHwzeE6TsXW6uc166ctntqC-reo4XdHe8W5ZIAIwV5YTZueQzKfbHbqxDNiOPprPz_gieAbjXl13RHqneWiExHPXOSIq5uhb6nAmxMmE9lECHR3hZQIv6nys38QWOkn6xZWhhX7-yVsJJsOL86Um55-gk9cQ-Nm9oH-Eu840cDEJlTqJJkG4cn4.jpeg
+./assets/images/JxUKAFFiyDovMcju-o4K1IBWyDjZWtlIBok4aiwhOl7geUU4z3V_NTSfS2QTwtVjCQHW9pnMzP92KYCwLjGxAicnEg8W5ovQfUx6fe5bhwBDTN6_ZIS3lzk6hRnxDHrhllSygI0e6A1koVJ7zpN9n9T3QiyU0efp6yymerRxmI9ms-LcKUIg7_Ovw8cRoXK5.jpeg
+./assets/images/K7xQBKwLa2AbL0o5YS7Ty2pFjp4_v2KfYyDsPbp4aRCFnAdUUn5uK7fpje-J0_Y2Rz-6Nlz8Lne7CreA4IB_0xcKpa26UNJTWtVcP8lHSPKXDcDVNAhZKMbG3zENe_GQC_faVx0XpjJ-wx6JRJvoKXEzUdLtfFzgT-1qoiAqxl0YzG9fq0c-rFWYBPzjhNoc.jpeg
+./assets/images/LCe9UD_Hy43EKlhLShW2pimA6Y-9JJQONQD3oGK26YVfYN8Ys-Y9U9pGadibnAAT-J0C11C3WJKVf70R9ulQirFkRzcGAX6S5fuRiawvvw4sklFeR938NwWmU4DGU6scy9jcagvk2BuogPkauLmf2f_1N1Ji1mPy5mkRMkrZc7ygUuI_3EbDX-An7jGP3BkF.jpeg
+./assets/images/mc8O9uSseOvJo1JMCsn5v_tPevZrRVlhUbCQHEkDCXKwKhALbw8OL7Sz3OcYDyfE1LWijzh233pbWq1G6pdhmy9SUiyUqS21jy7c-lLtOyZ65GnqPUojfWyyhxQ8ItoBc63VnBHegSPmUjwm70iriv6ShVpI2EWZMvE2lN_c1X36Xl8D2H4bFRnpd3_s6npd.jpeg
+./assets/images/mPUsvueMDo60Hi61TEpDNDXtDF_hvGV3aaZs7NjVNd3tGRwScppJfH1g76FdeRdXOIZQ73TerDN32jPpqiXc6FODnHbDpQYaVEykPEolZcnBSDNo4vx3DVdVGRcSPTqUP6rosmFhuaOwQx-fKx1bKcjk82W5sb7Saggabm7_6RuG4quIaXZJOGGoNHjrDsmc.jpeg
+./assets/images/The LostCompass Project website mochup.png
+./assets/images/WcNnscrghTxJzkZRbKPgLZSys3ySOIwC8uLl2LXrTdM6YfUIcJNkYyjtOxQXLkLM5jneHIimGRpFMYqzHdb15BMzeuOrgyZuCSD9UQatBPgLOpmsA4fKxjDIpWMM02QQH0EqQ1x3C0sulusCuKssY-vKaWBENylHqCLEg6NNcQ9nvnu7WDz1ROOrFOrR4hJ_.jpeg
+./assets/images/y9SXHoXN9KgsnRb-sS8_694aKd8ERte4zYmE7HjI3hGNYBeAONuUlNRVlSCe4_UIxHqlWru2KDolTzKAniji6GGpy4piYo_dIAaFSaz6V3u1F325OE8V_EEjFrkqsmWSLoeNFoorhQjgj3McW7wdeAeBJWRma7bIrZMZkn27xqAsT-Wrrh7tv_yHNUpILZG3.jpeg
+./assets/images/ZNc2Tw8bia5Sps5nfYv9-Bp9YEJP7m5aGBV69NawtpGJwBXzYgowC5LlqOP72_MrS47Z9FTj75sMbvqyTzd2AIQXJqkl1iTWXA_I2lOX1kQEzMUp4RvHifpVviEzNm_xmuhCzACs-uLDZP4guxQLep0pvU8nqtHZPZ0vrjtgZwJSJMW98SA9PZFTeBiHa866.jpeg
+./assets/logos/The LostCompass Project Logo.png
+./assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png
+./assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png
+./assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png
+./assets/mockups/Shirt Collections/crew gear/ChatGPT Image May 30, 2026, 06_04_01 PM (1).png
+./assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png
+./assets/mockups/The LostCompass Project Logo.png
+./assets/mockups/The LostCompass Project website mochup.png
+./website/dist/assets/images/coastal-overlook.jpeg
+./website/dist/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp
+./website/dist/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp
+./website/dist/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp
+./website/dist/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp
+./website/dist/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp
+./website/dist/assets/images/compass-rose-back-layout.jpeg
+./website/dist/assets/images/compass-rose-back-shirt.jpeg
+./website/dist/assets/images/compass-rose-chest-mark.jpeg
+./website/dist/assets/images/compass-rose-front-back.jpeg
+./website/dist/assets/images/field-notes.jpeg
+./website/dist/assets/images/forest-trail.jpeg
+./website/dist/assets/images/hero-hiker-sunset.jpeg
+./website/dist/assets/images/hikers-golden-ridge.jpeg
+./website/dist/assets/images/reef-restoration.jpeg
+./website/dist/assets/images/trail-crew.jpeg
+./website/dist/assets/images/vintage-compass-map.jpeg
+./website/dist/assets/logos/compass-rose-simple.svg
+./website/dist/assets/logos/compass-rose-transparent.png
+./website/dist/assets/logos/compass-rose-transparent.webp
+./website/dist/favicon.png
+./website/public/assets/images/coastal-overlook.jpeg
+./website/public/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp
+./website/public/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp
+./website/public/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp
+./website/public/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp
+./website/public/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp
+./website/public/assets/images/compass-rose-back-layout.jpeg
+./website/public/assets/images/compass-rose-back-shirt.jpeg
+./website/public/assets/images/compass-rose-chest-mark.jpeg
+./website/public/assets/images/compass-rose-front-back.jpeg
+./website/public/assets/images/field-notes.jpeg
+./website/public/assets/images/forest-trail.jpeg
+./website/public/assets/images/hero-hiker-sunset.jpeg
+./website/public/assets/images/hikers-golden-ridge.jpeg
+./website/public/assets/images/reef-restoration.jpeg
+./website/public/assets/images/trail-crew.jpeg
+./website/public/assets/images/vintage-compass-map.jpeg
+./website/public/assets/logos/compass-rose-simple.svg
+./website/public/assets/logos/compass-rose-transparent.png
+./website/public/assets/logos/compass-rose-transparent.webp
+./website/public/favicon.png
+
+==================================================
+9) IMAGE REFERENCES INSIDE CODE / CONTENT
+==================================================
+./website/src/data/siteContent.js:30:  logo: '/assets/logos/compass-rose-transparent.webp',
+./website/src/data/siteContent.js:31:  heroImage: '/assets/images/hero-hiker-sunset.jpeg',
+./website/src/data/siteContent.js:32:  missionImage: '/assets/images/vintage-compass-map.jpeg',
+./website/src/data/siteContent.js:33:  conservationFeatureImage: '/assets/images/reef-restoration.jpeg',
+./website/src/data/siteContent.js:156:    image: '/assets/images/hero-hiker-sunset.jpeg',
+./website/src/data/siteContent.js:163:    image: '/assets/images/coastal-overlook.jpeg',
+./website/src/data/siteContent.js:170:    image: '/assets/images/vintage-compass-map.jpeg',
+./website/src/data/siteContent.js:177:    image: '/assets/images/field-notes.jpeg',
+./website/src/data/siteContent.js:184:    image: '/assets/images/forest-trail.jpeg',
+./website/src/data/siteContent.js:191:    image: '/assets/images/hikers-golden-ridge.jpeg',
+./website/src/data/siteContent.js:200:    image: '/assets/images/trail-crew.jpeg',
+./website/src/data/siteContent.js:206:    image: '/assets/images/forest-trail.jpeg',
+./website/src/data/siteContent.js:212:    image: '/assets/images/coastal-overlook.jpeg',
+./website/src/data/siteContent.js:218:    image: '/assets/images/reef-restoration.jpeg',
+./website/src/data/siteContent.js:224:    image: '/assets/images/field-notes.jpeg',
+./website/src/data/siteContent.js:230:    image: '/assets/images/hikers-golden-ridge.jpeg',
+./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./website/src/data/siteContent.js:343:        image: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./website/src/data/siteContent.js:344:        sourcePath: 'assets/mockups/Shirt Collections/crew gear/ChatGPT Image May 30, 2026, 06_04_01 PM (1).png',
+./website/src/components/Logo.jsx:7:        src="/assets/logos/compass-rose-transparent.webp"
+./website/src/components/Section.jsx:22:        src="/assets/logos/compass-rose-transparent.webp"
+./website/README.md:81:../assets/logos/The LostCompass Project Logo.png
+./website/README.md:87:public/assets/logos/compass-rose-transparent.png
+./website/README.md:88:public/assets/logos/compass-rose-transparent.webp
+./website/README.md:89:public/assets/logos/compass-rose-simple.svg
+./website/README.md:90:public/favicon.png
+./website/README.md:96:public/assets/images/hero-hiker-sunset.jpeg
+./website/README.md:97:public/assets/images/hikers-golden-ridge.jpeg
+./website/README.md:98:public/assets/images/vintage-compass-map.jpeg
+./website/README.md:99:public/assets/images/forest-trail.jpeg
+./website/README.md:100:public/assets/images/coastal-overlook.jpeg
+./website/README.md:101:public/assets/images/reef-restoration.jpeg
+./website/README.md:102:public/assets/images/trail-crew.jpeg
+./website/README.md:103:public/assets/images/field-notes.jpeg
+./website/README.md:104:public/assets/images/compass-rose-front-back.jpeg
+./website/README.md:105:public/assets/images/compass-rose-chest-mark.jpeg
+./website/README.md:106:public/assets/images/compass-rose-back-layout.jpeg
+./website/README.md:107:public/assets/images/compass-rose-back-shirt.jpeg
+./website/index.html:10:    <link rel="icon" type="image/png" href="/favicon.png" />
+./website/index.html:11:    <link rel="preload" as="image" href="/assets/logos/compass-rose-transparent.webp" />
+./lostcompass_site_audit_clean_report.txt:133:./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:136:./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./lostcompass_site_audit_clean_report.txt:137:./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./lostcompass_site_audit_clean_report.txt:139:./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:140:./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./lostcompass_site_audit_clean_report.txt:142:./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./lostcompass_site_audit_clean_report.txt:143:./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./lostcompass_site_audit_clean_report.txt:146:./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:150:./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:151:./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./lostcompass_site_audit_clean_report.txt:153:./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:156:./website/src/data/siteContent.js:343:        image: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:182:./website/index.html:10:    <link rel="icon" type="image/png" href="/favicon.png" />
+./lostcompass_site_audit_clean_report.txt:183:./website/index.html:11:    <link rel="preload" as="image" href="/assets/logos/compass-rose-transparent.webp" />
+./lostcompass_site_audit_clean_report.txt:271:./lostcompass_site_audit_clean_report.txt:133:./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:274:./lostcompass_site_audit_clean_report.txt:136:./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./lostcompass_site_audit_clean_report.txt:275:./lostcompass_site_audit_clean_report.txt:137:./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./lostcompass_site_audit_clean_report.txt:277:./lostcompass_site_audit_clean_report.txt:139:./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:278:./lostcompass_site_audit_clean_report.txt:140:./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./lostcompass_site_audit_clean_report.txt:280:./lostcompass_site_audit_clean_report.txt:142:./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./lostcompass_site_audit_clean_report.txt:281:./lostcompass_site_audit_clean_report.txt:143:./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./lostcompass_site_audit_clean_report.txt:284:./lostcompass_site_audit_clean_report.txt:146:./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:288:./lostcompass_site_audit_clean_report.txt:150:./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:289:./lostcompass_site_audit_clean_report.txt:151:./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./lostcompass_site_audit_clean_report.txt:291:./lostcompass_site_audit_clean_report.txt:153:./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:324:./assets/images/0hh_Zy5RDxmQ9Qim9tS4rnjndll_k6dJKtb4XuUkf6YCrwcVT_Oc_DGRPA4EK7jmZULVgEWwir7gHjOZfQUVnxPJq_4JHfVS7viu81Vzh-d5gke2k4CoibzEIMgIN3eJ0McqN-v_ysxn7HyagQOCX4HLXH2kKijalxy0Yx8sL5jKL9mI4pnc6pzF8yptry8C.jpeg
+./lostcompass_site_audit_clean_report.txt:325:./assets/images/0O9qZoiCyQkoW2JKIz05Fm9D2GNPfe3Qv6z7ni1XM4oZw1vokwD1VOz5AqmQHqK7YNWLZzIGNH1RjMb6-bl9HU3LymfNqCnsA-2ACEvlFwerhR5ZK3HN34xyVBY0tkC8KpmLiMW1I4BivrObiWTWAT4CwtwGUX8qqadYc2pVJM9Q89me39eIET_4e-YeosPy.jpeg
+./lostcompass_site_audit_clean_report.txt:326:./assets/images/4Qbx7zz-tNBsq39AwB1QEdrR7ikXlv13JhDS9TPW6KT2MQWmiC2niD3CklzUtZ8STYnVD2CDtGjiMY2oW5Vx9tkSGpNEiMrdEUvM7QlEbGJST2rolboYo_cfBM0cvgLOtclbsnIQAXVv-EoEwbg2AtDPVIlGv9hFo_nwyL2BxfSBwrGK8QB0U6AD04H1TiIm.jpeg
+./lostcompass_site_audit_clean_report.txt:327:./assets/images/DcVA_gEIs5JmkG7qqHV4zim6ITLFnW5UOgzwkeEsA0AKoBI1aJ0OBnEYjLm7nFIzNsg_TPsmdTkEtW9Cb_abe0mlmSMAVKw2E4AVglxOWFH9H0_d8f4XHTeLxvImGtb6anDXEWAFGSPVaX-HmJKPvBr0jGKu-hSmWaoDl3oSDGUy9eUQ69jhDi_Sho9-ju1L.jpeg
+./lostcompass_site_audit_clean_report.txt:328:./assets/images/DtN4Rg5yIrj3ub_hIGpHyMPkWEmIt8o9xRujF_pAzLsQw4aeR5pS3r56-zUzEBsgDAW8l12tseJl-zogN85uHA1zV_9hpWukvnZ8PjGFyDZL0EjXVXqacSSpYHedp02_yS-v9cVdsbxRmd5UrWaWZrunEGr9yhk4mp37ae8Evh-GQVs9FbBuuyxDQG-iuQJ_.jpeg
+./lostcompass_site_audit_clean_report.txt:329:./assets/images/El_U6dGIfBMFsGzcpqxoV46CHFK_HrVANk0k8Wf4p6xpGLmIuFp-r9OXh3Zn_EOKz_PzQXPPqLV6ZSUfG7VmJwOzvc6p8MDxLImFi8BBzmQuP4xMCgj9bIcdIxsMRvTtGaBHr0YMFJhUdg_v5LavOSzzKJqLMkT6vTBclprGpJ7WSJ4M7V4Lr2XfrawgGTGD.jpeg
+./lostcompass_site_audit_clean_report.txt:330:./assets/images/fqOBpbAY-RefAguxHkxG2A8BuYTxr6yqi15ipPuANcy4OCSL8ORmR62KHaTlsVqh0EpeydXZOAVgZaWKAtzlPo1q9xuuu7vdWOr5AqIjHjuZmu8AyVk9FwwE2kEihCSmvJ5lP6Dj25qZ2x_VstRJi5U1_iqiIFlpY9VTLzEMNNCjzeNdcVo_kl_tv9HDkvjC.jpeg
+./lostcompass_site_audit_clean_report.txt:331:./assets/images/fvIouh2bDlR5LVxoZm0KqyOi2F05URkNF7z3ajdbN-CwYCvHIp1pTvOzfgVo1voit50TWgmuh9mB8eQyfGnHv2D0CGjks3Or9a8lHHCBclL9TjbvIzgwEi-U89Rs7nOGNjjmMZtXMnAVOoTlFzV4Ms1oMpqc2n5BQNcKEjxfB5brhJBJZGjdmnvYWdmQfsrZ.jpeg
+./lostcompass_site_audit_clean_report.txt:332:./assets/images/gIp1AuivaNA-bF-7xOXoscDwMQg878T1EBWi-T9Yw7F_Iu8hpy1b5rNUcLDC6iIkYazpYWXRATFlou24D-NU-D_gJ25hkK-PCQd7BePF7mQzxUWtEHNwq5y2ultCvOvo_fuOw4GVSOWfJiSBZAIFcGYRs75EnG3uxZULFiD2ulLXu35sca9OjIJ9rVbnJFjo.jpeg
+./lostcompass_site_audit_clean_report.txt:333:./assets/images/Gp7WvQTbUC_udYOcZ2aQhFZIdYOD2qUiMR2ObdM7zmO9wZe494iX7w5fRs6NTEF4Snge0TDQVrP9vsP9kYMtolvlFzEonqwhx6fYeGhky8gwYnRZwT3pbKJe528ltqyY3T5XnNFFUyX5ZvLLuuoeku3u3dfVIdqKodXWAH-3KCtcHqQBwiNdaXnlxrpskX-j.jpeg
+./lostcompass_site_audit_clean_report.txt:334:./assets/images/I-xbRR53R6yyuBEGhFnpyWWJupPU_VIQk9e40qBfWBeupKYv7RW9r-Mg85xuAgSUbBZUTc4cW0NK7wONHaa_kJNADwEDCzdW-IW65JrAsAeJ7YizA11J7Q-ZCTb4KKkn2XYlxOCiPQolyfmd4K6QhH2PmFCIP6UFougMnJTx3SzCnrEZsTKDku238P8jidqU.jpeg
+./lostcompass_site_audit_clean_report.txt:335:./assets/images/j905a_m0OxHwzeE6TsXW6uc166ctntqC-reo4XdHe8W5ZIAIwV5YTZueQzKfbHbqxDNiOPprPz_gieAbjXl13RHqneWiExHPXOSIq5uhb6nAmxMmE9lECHR3hZQIv6nys38QWOkn6xZWhhX7-yVsJJsOL86Um55-gk9cQ-Nm9oH-Eu840cDEJlTqJJkG4cn4.jpeg
+./lostcompass_site_audit_clean_report.txt:336:./assets/images/JxUKAFFiyDovMcju-o4K1IBWyDjZWtlIBok4aiwhOl7geUU4z3V_NTSfS2QTwtVjCQHW9pnMzP92KYCwLjGxAicnEg8W5ovQfUx6fe5bhwBDTN6_ZIS3lzk6hRnxDHrhllSygI0e6A1koVJ7zpN9n9T3QiyU0efp6yymerRxmI9ms-LcKUIg7_Ovw8cRoXK5.jpeg
+./lostcompass_site_audit_clean_report.txt:337:./assets/images/K7xQBKwLa2AbL0o5YS7Ty2pFjp4_v2KfYyDsPbp4aRCFnAdUUn5uK7fpje-J0_Y2Rz-6Nlz8Lne7CreA4IB_0xcKpa26UNJTWtVcP8lHSPKXDcDVNAhZKMbG3zENe_GQC_faVx0XpjJ-wx6JRJvoKXEzUdLtfFzgT-1qoiAqxl0YzG9fq0c-rFWYBPzjhNoc.jpeg
+./lostcompass_site_audit_clean_report.txt:338:./assets/images/LCe9UD_Hy43EKlhLShW2pimA6Y-9JJQONQD3oGK26YVfYN8Ys-Y9U9pGadibnAAT-J0C11C3WJKVf70R9ulQirFkRzcGAX6S5fuRiawvvw4sklFeR938NwWmU4DGU6scy9jcagvk2BuogPkauLmf2f_1N1Ji1mPy5mkRMkrZc7ygUuI_3EbDX-An7jGP3BkF.jpeg
+./lostcompass_site_audit_clean_report.txt:339:./assets/images/mc8O9uSseOvJo1JMCsn5v_tPevZrRVlhUbCQHEkDCXKwKhALbw8OL7Sz3OcYDyfE1LWijzh233pbWq1G6pdhmy9SUiyUqS21jy7c-lLtOyZ65GnqPUojfWyyhxQ8ItoBc63VnBHegSPmUjwm70iriv6ShVpI2EWZMvE2lN_c1X36Xl8D2H4bFRnpd3_s6npd.jpeg
+./lostcompass_site_audit_clean_report.txt:340:./assets/images/mPUsvueMDo60Hi61TEpDNDXtDF_hvGV3aaZs7NjVNd3tGRwScppJfH1g76FdeRdXOIZQ73TerDN32jPpqiXc6FODnHbDpQYaVEykPEolZcnBSDNo4vx3DVdVGRcSPTqUP6rosmFhuaOwQx-fKx1bKcjk82W5sb7Saggabm7_6RuG4quIaXZJOGGoNHjrDsmc.jpeg
+./lostcompass_site_audit_clean_report.txt:341:./assets/images/The LostCompass Project website mochup.png
+./lostcompass_site_audit_clean_report.txt:342:./assets/images/WcNnscrghTxJzkZRbKPgLZSys3ySOIwC8uLl2LXrTdM6YfUIcJNkYyjtOxQXLkLM5jneHIimGRpFMYqzHdb15BMzeuOrgyZuCSD9UQatBPgLOpmsA4fKxjDIpWMM02QQH0EqQ1x3C0sulusCuKssY-vKaWBENylHqCLEg6NNcQ9nvnu7WDz1ROOrFOrR4hJ_.jpeg
+./lostcompass_site_audit_clean_report.txt:343:./assets/images/y9SXHoXN9KgsnRb-sS8_694aKd8ERte4zYmE7HjI3hGNYBeAONuUlNRVlSCe4_UIxHqlWru2KDolTzKAniji6GGpy4piYo_dIAaFSaz6V3u1F325OE8V_EEjFrkqsmWSLoeNFoorhQjgj3McW7wdeAeBJWRma7bIrZMZkn27xqAsT-Wrrh7tv_yHNUpILZG3.jpeg
+./lostcompass_site_audit_clean_report.txt:344:./assets/images/ZNc2Tw8bia5Sps5nfYv9-Bp9YEJP7m5aGBV69NawtpGJwBXzYgowC5LlqOP72_MrS47Z9FTj75sMbvqyTzd2AIQXJqkl1iTWXA_I2lOX1kQEzMUp4RvHifpVviEzNm_xmuhCzACs-uLDZP4guxQLep0pvU8nqtHZPZ0vrjtgZwJSJMW98SA9PZFTeBiHa866.jpeg
+./lostcompass_site_audit_clean_report.txt:345:./assets/logos/The LostCompass Project Logo.png
+./lostcompass_site_audit_clean_report.txt:346:./assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png
+./lostcompass_site_audit_clean_report.txt:347:./assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png
+./lostcompass_site_audit_clean_report.txt:348:./assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png
+./lostcompass_site_audit_clean_report.txt:349:./assets/mockups/Shirt Collections/crew gear/ChatGPT Image May 30, 2026, 06_04_01 PM (1).png
+./lostcompass_site_audit_clean_report.txt:350:./assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png
+./lostcompass_site_audit_clean_report.txt:351:./assets/mockups/The LostCompass Project Logo.png
+./lostcompass_site_audit_clean_report.txt:352:./assets/mockups/The LostCompass Project website mochup.png
+./lostcompass_site_audit_clean_report.txt:353:./website/dist/assets/images/coastal-overlook.jpeg
+./lostcompass_site_audit_clean_report.txt:354:./website/dist/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp
+./lostcompass_site_audit_clean_report.txt:355:./website/dist/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp
+./lostcompass_site_audit_clean_report.txt:356:./website/dist/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp
+./lostcompass_site_audit_clean_report.txt:357:./website/dist/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp
+./lostcompass_site_audit_clean_report.txt:358:./website/dist/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp
+./lostcompass_site_audit_clean_report.txt:359:./website/dist/assets/images/compass-rose-back-layout.jpeg
+./lostcompass_site_audit_clean_report.txt:360:./website/dist/assets/images/compass-rose-back-shirt.jpeg
+./lostcompass_site_audit_clean_report.txt:361:./website/dist/assets/images/compass-rose-chest-mark.jpeg
+./lostcompass_site_audit_clean_report.txt:362:./website/dist/assets/images/compass-rose-front-back.jpeg
+./lostcompass_site_audit_clean_report.txt:363:./website/dist/assets/images/field-notes.jpeg
+./lostcompass_site_audit_clean_report.txt:364:./website/dist/assets/images/forest-trail.jpeg
+./lostcompass_site_audit_clean_report.txt:365:./website/dist/assets/images/hero-hiker-sunset.jpeg
+./lostcompass_site_audit_clean_report.txt:366:./website/dist/assets/images/hikers-golden-ridge.jpeg
+./lostcompass_site_audit_clean_report.txt:367:./website/dist/assets/images/reef-restoration.jpeg
+./lostcompass_site_audit_clean_report.txt:368:./website/dist/assets/images/trail-crew.jpeg
+./lostcompass_site_audit_clean_report.txt:369:./website/dist/assets/images/vintage-compass-map.jpeg
+./lostcompass_site_audit_clean_report.txt:370:./website/dist/assets/logos/compass-rose-simple.svg
+./lostcompass_site_audit_clean_report.txt:371:./website/dist/assets/logos/compass-rose-transparent.png
+./lostcompass_site_audit_clean_report.txt:372:./website/dist/assets/logos/compass-rose-transparent.webp
+./lostcompass_site_audit_clean_report.txt:373:./website/dist/favicon.png
+./lostcompass_site_audit_clean_report.txt:374:./website/public/assets/images/coastal-overlook.jpeg
+./lostcompass_site_audit_clean_report.txt:375:./website/public/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp
+./lostcompass_site_audit_clean_report.txt:376:./website/public/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp
+./lostcompass_site_audit_clean_report.txt:377:./website/public/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp
+./lostcompass_site_audit_clean_report.txt:378:./website/public/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp
+./lostcompass_site_audit_clean_report.txt:379:./website/public/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp
+./lostcompass_site_audit_clean_report.txt:380:./website/public/assets/images/compass-rose-back-layout.jpeg
+./lostcompass_site_audit_clean_report.txt:381:./website/public/assets/images/compass-rose-back-shirt.jpeg
+./lostcompass_site_audit_clean_report.txt:382:./website/public/assets/images/compass-rose-chest-mark.jpeg
+./lostcompass_site_audit_clean_report.txt:383:./website/public/assets/images/compass-rose-front-back.jpeg
+./lostcompass_site_audit_clean_report.txt:384:./website/public/assets/images/field-notes.jpeg
+./lostcompass_site_audit_clean_report.txt:385:./website/public/assets/images/forest-trail.jpeg
+./lostcompass_site_audit_clean_report.txt:386:./website/public/assets/images/hero-hiker-sunset.jpeg
+./lostcompass_site_audit_clean_report.txt:387:./website/public/assets/images/hikers-golden-ridge.jpeg
+./lostcompass_site_audit_clean_report.txt:388:./website/public/assets/images/reef-restoration.jpeg
+./lostcompass_site_audit_clean_report.txt:389:./website/public/assets/images/trail-crew.jpeg
+./lostcompass_site_audit_clean_report.txt:390:./website/public/assets/images/vintage-compass-map.jpeg
+./lostcompass_site_audit_clean_report.txt:391:./website/public/assets/logos/compass-rose-simple.svg
+./lostcompass_site_audit_clean_report.txt:392:./website/public/assets/logos/compass-rose-transparent.png
+./lostcompass_site_audit_clean_report.txt:393:./website/public/assets/logos/compass-rose-transparent.webp
+./lostcompass_site_audit_clean_report.txt:394:./website/public/favicon.png
+./lostcompass_site_audit_clean_report.txt:399:./website/src/data/siteContent.js:30:  logo: '/assets/logos/compass-rose-transparent.webp',
+./lostcompass_site_audit_clean_report.txt:400:./website/src/data/siteContent.js:31:  heroImage: '/assets/images/hero-hiker-sunset.jpeg',
+./lostcompass_site_audit_clean_report.txt:401:./website/src/data/siteContent.js:32:  missionImage: '/assets/images/vintage-compass-map.jpeg',
+./lostcompass_site_audit_clean_report.txt:402:./website/src/data/siteContent.js:33:  conservationFeatureImage: '/assets/images/reef-restoration.jpeg',
+./lostcompass_site_audit_clean_report.txt:403:./website/src/data/siteContent.js:156:    image: '/assets/images/hero-hiker-sunset.jpeg',
+./lostcompass_site_audit_clean_report.txt:404:./website/src/data/siteContent.js:163:    image: '/assets/images/coastal-overlook.jpeg',
+./lostcompass_site_audit_clean_report.txt:405:./website/src/data/siteContent.js:170:    image: '/assets/images/vintage-compass-map.jpeg',
+./lostcompass_site_audit_clean_report.txt:406:./website/src/data/siteContent.js:177:    image: '/assets/images/field-notes.jpeg',
+./lostcompass_site_audit_clean_report.txt:407:./website/src/data/siteContent.js:184:    image: '/assets/images/forest-trail.jpeg',
+./lostcompass_site_audit_clean_report.txt:408:./website/src/data/siteContent.js:191:    image: '/assets/images/hikers-golden-ridge.jpeg',
+./lostcompass_site_audit_clean_report.txt:409:./website/src/data/siteContent.js:200:    image: '/assets/images/trail-crew.jpeg',
+./lostcompass_site_audit_clean_report.txt:410:./website/src/data/siteContent.js:206:    image: '/assets/images/forest-trail.jpeg',
+./lostcompass_site_audit_clean_report.txt:411:./website/src/data/siteContent.js:212:    image: '/assets/images/coastal-overlook.jpeg',
+./lostcompass_site_audit_clean_report.txt:412:./website/src/data/siteContent.js:218:    image: '/assets/images/reef-restoration.jpeg',
+./lostcompass_site_audit_clean_report.txt:413:./website/src/data/siteContent.js:224:    image: '/assets/images/field-notes.jpeg',
+./lostcompass_site_audit_clean_report.txt:414:./website/src/data/siteContent.js:230:    image: '/assets/images/hikers-golden-ridge.jpeg',
+./lostcompass_site_audit_clean_report.txt:415:./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:416:./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./lostcompass_site_audit_clean_report.txt:417:./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./lostcompass_site_audit_clean_report.txt:418:./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:419:./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./lostcompass_site_audit_clean_report.txt:420:./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./lostcompass_site_audit_clean_report.txt:421:./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./lostcompass_site_audit_clean_report.txt:422:./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:423:./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:424:./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./lostcompass_site_audit_clean_report.txt:425:./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:426:./website/src/data/siteContent.js:343:        image: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:427:./website/src/data/siteContent.js:344:        sourcePath: 'assets/mockups/Shirt Collections/crew gear/ChatGPT Image May 30, 2026, 06_04_01 PM (1).png',
+./lostcompass_site_audit_clean_report.txt:428:./website/src/components/Logo.jsx:7:        src="/assets/logos/compass-rose-transparent.webp"
+./lostcompass_site_audit_clean_report.txt:429:./website/src/components/Section.jsx:22:        src="/assets/logos/compass-rose-transparent.webp"
+./lostcompass_site_audit_clean_report.txt:430:./website/README.md:81:../assets/logos/The LostCompass Project Logo.png
+./lostcompass_site_audit_clean_report.txt:431:./website/README.md:87:public/assets/logos/compass-rose-transparent.png
+./lostcompass_site_audit_clean_report.txt:432:./website/README.md:88:public/assets/logos/compass-rose-transparent.webp
+./lostcompass_site_audit_clean_report.txt:433:./website/README.md:89:public/assets/logos/compass-rose-simple.svg
+./lostcompass_site_audit_clean_report.txt:434:./website/README.md:90:public/favicon.png
+./lostcompass_site_audit_clean_report.txt:435:./website/README.md:96:public/assets/images/hero-hiker-sunset.jpeg
+./lostcompass_site_audit_clean_report.txt:436:./website/README.md:97:public/assets/images/hikers-golden-ridge.jpeg
+./lostcompass_site_audit_clean_report.txt:437:./website/README.md:98:public/assets/images/vintage-compass-map.jpeg
+./lostcompass_site_audit_clean_report.txt:438:./website/README.md:99:public/assets/images/forest-trail.jpeg
+./lostcompass_site_audit_clean_report.txt:439:./website/README.md:100:public/assets/images/coastal-overlook.jpeg
+./lostcompass_site_audit_clean_report.txt:440:./website/README.md:101:public/assets/images/reef-restoration.jpeg
+./lostcompass_site_audit_clean_report.txt:441:./website/README.md:102:public/assets/images/trail-crew.jpeg
+./lostcompass_site_audit_clean_report.txt:442:./website/README.md:103:public/assets/images/field-notes.jpeg
+./lostcompass_site_audit_clean_report.txt:443:./website/README.md:104:public/assets/images/compass-rose-front-back.jpeg
+./lostcompass_site_audit_clean_report.txt:444:./website/README.md:105:public/assets/images/compass-rose-chest-mark.jpeg
+./lostcompass_site_audit_clean_report.txt:445:./website/README.md:106:public/assets/images/compass-rose-back-layout.jpeg
+./lostcompass_site_audit_clean_report.txt:446:./website/README.md:107:public/assets/images/compass-rose-back-shirt.jpeg
+./lostcompass_site_audit_clean_report.txt:447:./website/index.html:10:    <link rel="icon" type="image/png" href="/favicon.png" />
+./lostcompass_site_audit_clean_report.txt:448:./website/index.html:11:    <link rel="preload" as="image" href="/assets/logos/compass-rose-transparent.webp" />
+./lostcompass_site_audit_clean_report.txt:449:./lostcompass_site_audit_clean_report.txt:133:./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:450:./lostcompass_site_audit_clean_report.txt:136:./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+./lostcompass_site_audit_clean_report.txt:451:./lostcompass_site_audit_clean_report.txt:137:./website/src/data/siteContent.js:264:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/Shirt 1/ChatGPT Image May 30, 2026, 05_43_29 PM.png',
+./lostcompass_site_audit_clean_report.txt:452:./lostcompass_site_audit_clean_report.txt:139:./website/src/data/siteContent.js:271:        image: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:453:./lostcompass_site_audit_clean_report.txt:140:./website/src/data/siteContent.js:272:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 2/The LostCompass Project logo fr and back.png',
+./lostcompass_site_audit_clean_report.txt:454:./lostcompass_site_audit_clean_report.txt:142:./website/src/data/siteContent.js:279:        image: '/assets/images/collections/compass-rose-collection/compass-rose-mountain-sea-mark.webp',
+./lostcompass_site_audit_clean_report.txt:455:./lostcompass_site_audit_clean_report.txt:143:./website/src/data/siteContent.js:280:        sourcePath: 'assets/mockups/Shirt Collections/Compass rose collection/shirt 3/The LostCompass Project t-shirt mochup.png',
+./lostcompass_site_audit_clean_report.txt:456:./lostcompass_site_audit_clean_report.txt:146:./website/src/data/siteContent.js:290:    previewImage: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:457:./lostcompass_site_audit_clean_report.txt:150:./website/src/data/siteContent.js:311:        image: '/assets/images/collections/mountain-and-sea-collection/mountain-and-sea-series.webp',
+./lostcompass_site_audit_clean_report.txt:458:./lostcompass_site_audit_clean_report.txt:151:./website/src/data/siteContent.js:312:        sourcePath: 'assets/mockups/Shirt Collections/mountain and sea collection/ChatGPT Image May 30, 2026, 05_55_54 PM.png',
+./lostcompass_site_audit_clean_report.txt:459:./lostcompass_site_audit_clean_report.txt:153:./website/src/data/siteContent.js:322:    previewImage: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:460:./lostcompass_site_audit_clean_report.txt:156:./website/src/data/siteContent.js:343:        image: '/assets/images/collections/trail-crew-collection/keep-it-wild-crew-gear.webp',
+./lostcompass_site_audit_clean_report.txt:461:./lostcompass_site_audit_clean_report.txt:182:./website/index.html:10:    <link rel="icon" type="image/png" href="/favicon.png" />
+./lostcompass_site_audit_clean_report.txt:462:./lostcompass_site_audit_clean_report.txt:183:./website/index.html:11:    <link rel="preload" as="image" href="/assets/logos/compass-rose-transparent.webp" />
+./lostcompass_site_audit_clean_report.txt:463:./lostcompass_site_audit_clean_report.txt:271:./lostcompass_site_audit_clean_report.txt:133:./website/src/data/siteContent.js:242:    previewImage: '/assets/images/collections/compass-rose-collection/compass-rose-front-back.webp',
+./lostcompass_site_audit_clean_report.txt:464:./lostcompass_site_audit_clean_report.txt:274:./lostcompass_site_audit_clean_report.txt:136:./website/src/data/siteContent.js:263:        image: '/assets/images/collections/compass-rose-collection/compass-rose-backmark.webp',
+
+==================================================
+10) COMING SOON CHECK
+==================================================
+./website/src/App.jsx:456:          Coming Soon
+./website/src/App.jsx:493:              Coming Soon
+./website/src/App.jsx:509:              Coming Soon
+./website/src/data/siteContent.js:67:    eyebrow: 'Coming Soon',
+./website/src/data/siteContent.js:135:      title: 'Coming Soon',
+./website/src/data/siteContent.js:239:    label: 'Coming Soon',
+./website/src/data/siteContent.js:288:    label: 'Coming Soon',
+./website/src/data/siteContent.js:320:    label: 'Coming Soon',
+./lostcompass_site_audit_clean_report.txt:613:10) COMING SOON CHECK
+./Brand/WEBSITE_BRIEF.md:302:Coming Soon
+
+==================================================
+11) CHECKOUT / CART / PAYMENT CHECK
+==================================================
+./website/src/data/siteContent.js:141:      text: 'Each collection is a visual preview of future mission-support pieces. No checkout, no cart, no prices, and no store links are active in V0.1.',
+./lostcompass_site_audit_clean_report.txt:124:./website/src/data/siteContent.js:141:      text: 'Each collection is a visual preview of future mission-support pieces. No checkout, no cart, no prices, and no store links are active in V0.1.',
+./lostcompass_site_audit_clean_report.txt:262:./lostcompass_site_audit_clean_report.txt:124:./website/src/data/siteContent.js:141:      text: 'Each collection is a visual preview of future mission-support pieces. No checkout, no cart, no prices, and no store links are active in V0.1.',
+./Brand/WEBSITE_BRIEF.md:312:No shopping cart required in V0.1.
+
+==================================================
+12) PLACEHOLDER / BROKEN LINK CHECK
+==================================================
+./website/src/App.jsx:516:                {product.storeUrlPlaceholder || 'Future store URL placeholder. Not assigned for V0.1.'}
+./website/src/data/siteContent.js:364:    storeUrlPlaceholder: 'Future store URL placeholder. Not assigned for V0.1.',
+./lostcompass_site_audit_clean_report.txt:112:./website/src/App.jsx:516:                {product.storeUrlPlaceholder || 'Future store URL placeholder. Not assigned for V0.1.'}
+./lostcompass_site_audit_clean_report.txt:250:./lostcompass_site_audit_clean_report.txt:112:./website/src/App.jsx:516:                {product.storeUrlPlaceholder || 'Future store URL placeholder. Not assigned for V0.1.'}
+
+==================================================
+ AUDIT COMPLETE
+==================================================
