@@ -295,7 +295,7 @@ export function StoryArticleGrid({ stories }) {
                   <h2 className="mt-5 text-2xl font-black uppercase leading-tight text-compass-parchment">{story.title}</h2>
                   <p className="mt-4 text-sm leading-7 text-compass-muted">{story.excerpt}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-compass-gold">
-                    Read Draft <ArrowRight size={16} />
+                    {story.status === 'Published' ? 'Read Story' : 'Read Draft'} <ArrowRight size={16} />
                   </span>
                 </div>
               </a>
@@ -366,7 +366,7 @@ export function StoryArticlePage({ story }) {
                 ))}
               </dl>
             ) : null}
-            <div className="mt-8 rounded-lg border border-compass-gold/30 bg-compass-gold/10 p-5">
+            {story.status !== 'Published' && <div className="mt-8 rounded-lg border border-compass-gold/30 bg-compass-gold/10 p-5">
               <p className="flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-compass-gold">
                 <AlertTriangle size={18} /> Draft / Human Review Required
               </p>
@@ -377,6 +377,7 @@ export function StoryArticlePage({ story }) {
                 This article framework is not final historical reporting. Research notes, source links, access details, and human review are required before public publishing.
               </p>
             </div>
+            }
             <div className="mt-10 space-y-10">
               {story.sections.map((section) => (
                 <section key={section.id} className="rounded-lg border border-white/10 bg-white/[0.045] p-6 sm:p-8">
@@ -427,7 +428,8 @@ export function StoryArticlePage({ story }) {
               <p className="mt-3 text-sm leading-7 text-compass-muted">{story.location}</p>
             </div>
             <div className="rounded-lg border border-white/10 bg-white/[0.055] p-5">
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-compass-gold">Research Needed</p>
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-compass-gold">{story.status === 'Published' ? 'About This History' : 'Research Needed'}</p>
+              {story.status === 'Published' && <p className="mt-3 text-sm leading-7 text-compass-muted">{story.researchNotes}</p>}
               <ul className="mt-4 space-y-3 text-sm leading-6 text-compass-muted">
                 {researchList.map((item) => (
                   <li key={item.id} className="flex gap-3">
